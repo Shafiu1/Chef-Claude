@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Main from './components/Main';
 import StatePractice from './components/StatePractice';
+import Contact from './components/Contact';
+import profile from './assets/profile.png'
 // import './App.css'
 
 function App() {
@@ -11,7 +13,10 @@ function App() {
     <>
       <Header/>
       <Main/>
-      <StatePractice/>
+      <Contact 
+        img={profile}
+      />
+      {/* <StatePractice/> */}
     </>
   )
 }
