@@ -28,7 +28,7 @@ const Main=()=>{
                 />
                 <button>Add ingredient</button>
             </form>
-            <h1>☆⭐Ingredients on hands</h1>
+            <h1>Ingredients on hands</h1>
             <ul className="ingredient-list">
                 {list}
             </ul>

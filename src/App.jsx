@@ -1,9 +1,10 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import Header from './components/Header'
 import Main from './components/Main';
 import StatePractice from './components/StatePractice';
 import Contact from './components/Contact';
-import profile from './assets/profile.png'
+import profile from './assets/profile.png';
+import Form from './components/Form';
 // import './App.css'
 
 function App() {
@@ -11,11 +12,12 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Main/>
-      <Contact 
+      {/* <Header/> */}
+      {/* <Main/> */}
+      {/* <Contact 
         img={profile}
-      />
+      /> */}
+      <Form/>
       {/* <StatePractice/> */}
     </>
   )
