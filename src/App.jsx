@@ -12,12 +12,12 @@ function App() {
 
   return (
     <>
-      {/* <Header/> */}
-      {/* <Main/> */}
+      <Header/>
+      <Main/>
       {/* <Contact 
         img={profile}
       /> */}
-      <Form/>
+      {/* <Form/> */}
       {/* <StatePractice/> */}
     </>
   )

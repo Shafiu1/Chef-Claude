@@ -6,9 +6,7 @@ const Main=()=>{
     const list = ingredients.map((ingredient,index)=>{
         return <li key={index}>{ingredient}</li>
     });
-    const handleSubmit=(event)=>{
-        event.preventDefault();
-        const formData = new FormData(event.currentTarget);
+    const addIngredient =(formData)=>{
         const newIngredient = formData.get("ingredient");
         setIngredients((ingredients)=>{
             return [
@@ -19,7 +17,7 @@ const Main=()=>{
     }
     return(
         <main>
-            <form className="add-ingredient-form" onSubmit={handleSubmit}>
+            <form className="add-ingredient-form" action={addIngredient}>
                 <input
                     type="text"
                     placeholder="e.g. oregano"
