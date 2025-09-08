@@ -3,7 +3,7 @@ import { useState } from "react";
 const Main=()=>{
 
     const [ingredients,setIngredients] = useState([]);
-    const list = ingredients.map((ingredient,index)=>{
+    const ingredientsListItems = ingredients.map((ingredient,index)=>{
         return <li key={index}>{ingredient}</li>
     });
     const addIngredient =(formData)=>{
@@ -28,7 +28,7 @@ const Main=()=>{
             </form>
             <h1>Ingredients on hands</h1>
             <ul className="ingredient-list">
-                {list}
+                {ingredientsListItems}
             </ul>
         </main>
     );
