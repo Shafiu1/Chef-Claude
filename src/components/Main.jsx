@@ -26,10 +26,17 @@ const Main=()=>{
                 />
                 <button>Add ingredient</button>
             </form>
-            <h1>Ingredients on hands</h1>
-            <ul className="ingredient-list">
-                {ingredientsListItems}
-            </ul>
+            {ingredientsListItems.length>0 && <section>
+                <h2>Ingredients on hands</h2>
+                <ul className="ingredient-list">
+                    {ingredientsListItems}
+                </ul>
+                <div className="make-recipe">
+                    <h3>Ready for a recipe?</h3>
+                    <p>Generate a recipe from your list of ingredients.</p>
+                    <button>Get a recipe</button>
+                </div>
+            </section>}
         </main>
     );
 }

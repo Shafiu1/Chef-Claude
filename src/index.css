@@ -166,3 +166,40 @@ main{
   text-align: center;
   margin-left: 50px;
 }
+
+.make-recipe{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(232, 221, 209);
+  margin:auto;
+  padding: 10px;
+  border-radius: 10px;
+  padding-bottom:20px;
+  width: 30%;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10),0px 1px 2px 0px rgba(0,0,0,0.8);
+}
+
+.make-recipe > h3{
+  font-size:1.04rem;
+  font-weight: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.make-recipe > p{
+  font-size:0.94rem;
+  font-weight: 200;
+}
+
+.make-recipe > button{
+  background-color:rgb(210, 143, 56);
+  padding: 2px;
+  margin-left: 70%;
+  margin-top:-40px;
+  border-radius: 5px;
+  width: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.make-recipe > button:hover{
+  background-color: rgb(227, 134, 12);
+  transform: translateY(-1px) scale(1.03);
+}
