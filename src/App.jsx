@@ -12,9 +12,18 @@ import { useState } from 'react';
 
 function App() {
   // const [count, setCount] = useState(0)
+  // const [on, setOn] = useState(props.on);
   const [pads,setPads]=useState(padsData);
+
+  function toggle(id) {
+    console.log(id);
+    //map over the pads array
+    setPads(prevpads =>prevpads.map(item=>{
+      return item.id===id?{...item,on:!item.on}:item;
+    }));
+  }
   const buttonElement =pads.map(pad=>{
-    return <Pad key={pad.id} color={pad.color} on={pad.on}/>
+    return <Pad id={pad.id} key={pad.id} color={pad.color} on={pad.on} toggle={toggle}/>
   })
   return (
     <>
