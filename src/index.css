@@ -203,3 +203,7 @@ main{
   background-color: rgb(227, 134, 12);
   transform: translateY(-1px) scale(1.03);
 }
+
+.on{
+  opacity: 0.1;
+}
