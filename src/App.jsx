@@ -43,10 +43,10 @@ function App() {
       /> */}
       {/* <Form darkMode={true}/> */}
       {/* <StatePractice/> */}
-      <div style={{backgroundColor:"#555"}}>
+      {/* <div style={{backgroundColor:"#555"}}>
         {buttonElement}
         <button style={{ backgroundColor: "#cccccc" }} onClick={resetAll}>Reset All</button>
-      </div>
+      </div> */}
 
     </>
   )

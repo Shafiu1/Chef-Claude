@@ -4,14 +4,15 @@ const Ingredients = (props)=>{
     });
     return(
         <section>
-            <h2>Ingredients on hands</h2>
-            <ul className="ingredient-list">
+            <h2 className="ingredient-title">Ingredients on Hand</h2>
+            <ul className="ingredient-list-choosen">
                 {ingredientsListItems}
             </ul>
+
             {props.ingredients.length >= 4 && <div className="make-recipe">
                 <h3>Ready for a recipe?</h3>
                 <p>Generate a recipe from your list of ingredients.</p>
-                <button onClick={props.handleRecipeClick}>Get a recipe</button>
+                <button onClick={props.getRecipe}>Get a recipe</button>
             </div>}
         </section>
     );

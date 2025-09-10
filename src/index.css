@@ -68,10 +68,26 @@ main{
   margin-right: 5px;
 }
 
-.ingredient-list{
-  list-style-type:disc;
-  padding:30px 80px 10px;
+.ingredient-title {
+  text-align: center;      /* centers the title */
+  margin-bottom: 10px;     /* spacing between title and list */
+  font-size: 1.8rem;       /* adjust font size */
+  font-weight: 600;        /* make it slightly bold */
+  color: #333;             /* dark text color */
 }
+
+.ingredient-list-choosen {
+  list-style-type: disc;       /* keep bullet points */
+  padding: 30px 80px 10px;     /* spacing around the list */
+  margin: 10px auto ;              /* center the list container horizontally */
+  display: table;              /* shrink-wrap the width to content */
+  text-align: left;            /* left-align the list items */
+  background-color: #f9f9f9;   /* optional: light background */
+  border-radius: 10px;         /* optional: rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional: subtle shadow */
+}
+
+
 
 .contact-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -167,43 +183,154 @@ main{
   margin-left: 50px;
 }
 
-.make-recipe{
+.make-recipe {
   display: flex;
   flex-direction: column;
-  background-color: rgb(232, 221, 209);
-  margin:auto;
-  padding: 10px;
-  border-radius: 10px;
-  padding-bottom:20px;
+  background-color: #e8ddd1;       /* softer RGB equivalent */
+  margin: 20px auto;
+  padding: 20px 15px 30px 15px;    /* uniform padding, extra at bottom */
+  border-radius: 12px;             /* slightly more rounded corners */
   width: 30%;
-  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10),0px 1px 2px 0px rgba(0,0,0,0.8);
-}
-
-.make-recipe > h3{
-  font-size:1.04rem;
-  font-weight: 700;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-.make-recipe > p{
-  font-size:0.94rem;
-  font-weight: 200;
-}
-
-.make-recipe > button{
-  background-color:rgb(210, 143, 56);
-  padding: 2px;
-  margin-left: 70%;
-  margin-top:-40px;
-  border-radius: 5px;
-  width: 100px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 
+              0 1px 3px rgba(0, 0, 0, 0.08); /* softer shadows */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.make-recipe > button:hover{
-  background-color: rgb(227, 134, 12);
-  transform: translateY(-1px) scale(1.03);
+.make-recipe:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 
+              0 2px 4px rgba(0, 0, 0, 0.10); /* subtle hover effect */
 }
+
+.make-recipe > h3 {
+  font-size: 1.1rem;                /* slightly larger for better readability */
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 8px;
+  color: #4a3f3f;                  /* darker, nicer text color */
+}
+
+.make-recipe > p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.5;                 /* improves readability */
+  color: #3b322f;
+  margin-bottom: 15px;
+}
+
+.make-recipe > button {
+  align-self:center;             /* positions button to the right */
+  background-color: #d28f38;        /* original color */
+  padding: 6px 12px;                /* better padding than 2px */
+  border-radius: 6px;
+  border: none;                     /* remove default border */
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.make-recipe > button:hover {
+  background-color: #e3860c;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 
 .on{
   opacity: 0.1;
 }
+
+/* Container styling */
+.recipe-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #fff8f0;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Main title */
+.recipe-title {
+  font-size: 2rem;
+  color: #d35400;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px #f7d6b8;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f1c40f;
+  padding-bottom: 0.3rem;
+  color: #e67e22;
+}
+
+/* Subsection titles (like Main Ingredients, Spices) */
+.sub-section-title {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #f39c12;
+}
+
+/* Ingredient list styling */
+.ingredient-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.ingredient-item {
+  background-color: #fdebd0;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.4rem;
+  border-left: 4px solid #f39c12;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.ingredient-item:hover {
+  transform: scale(1.02);
+  background-color: #fce5c7;
+}
+
+/* Instruction steps */
+.instruction-list {
+  counter-reset: step-counter;
+  margin-left: 1rem;
+}
+
+.instruction-step {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  padding: 0.5rem 0.8rem;
+  background-color: #fef9f2;
+  border-left: 4px solid #e67e22;
+  border-radius: 6px;
+  position: relative;
+}
+
+.instruction-step::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #e67e22;
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
